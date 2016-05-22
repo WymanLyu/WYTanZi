@@ -91,7 +91,7 @@
         WYHomeViewController *homeVc = [[WYHomeViewController alloc] init];
         WYBaseNavigationViewController *baseVc = [[WYBaseNavigationViewController alloc] initWithRootViewController:homeVc];
         
-        self.view.window.rootViewController = baseVc;
+        [UIApplication sharedApplication].keyWindow.rootViewController = baseVc;
         
     });
 }

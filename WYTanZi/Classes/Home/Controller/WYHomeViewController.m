@@ -10,6 +10,7 @@
 #import "WYHomeViewController.h"
 #import "WYNewModel.h"
 #import "WYNewCell.h"
+#import "WYTransionBar.h"
 
 
 #define HomeUrl @"http://www.cdsb.mobi/cdsb/app/ios/pacong"
@@ -23,10 +24,14 @@
 /** 页数 */
 @property (nonatomic, assign) NSInteger page;
 
+/** 悬浮bar */
+@property (nonatomic, weak) WYTransionBar *transitionBar;
+
 @end
 
 @implementation WYHomeViewController
 
+#pragma  mark - 系统回调
 // 创建tableView
 - (void)loadView {
     UITableView *tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
@@ -40,6 +45,22 @@
     self.page = 0;
 }
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    
+    // 1.设置轮播图
+    [self setupAdView];
+    
+    // 2.设置转场按钮
+    [self setupTransitionBtn];
+    
+    // 3.请求数据
+    [self loadData];
+    
+    // 4.上拉刷新
+    [self setupRefresh];
+}
+
 #pragma  mark - 懒加载
 - (NSArray *)section {
     if (!_section) {
@@ -49,29 +70,39 @@
     return _section;
 }
 
-- (void)viewDidLoad{
-    [super viewDidLoad];
-    
-    // 1.设置轮播图
+#pragma mark - 设置轮播图
+- (void)setupAdView {
     UIView *view = [[UIView alloc] init];
     view.wy_height = 200;
     view.backgroundColor = [UIColor orangeColor];
     self.tableView.tableHeaderView = view;
     self.view.backgroundColor = [UIColor blackColor];
-    
-    // 2.请求数据
-    [self loadData];
-    
-    // 3.上拉刷新
-    [self setupRefresh];
 }
 
-// 设置刷新控件
+#pragma mark - 设置转场按钮
+- (void)setupTransitionBtn {
+    // 创建bar
+    WYTransionBar *bar = [WYTransionBar transitionBar];
+    
+    // 设置尺寸
+    self.transitionBar = bar;
+//    [self.view.window addSubview:bar];
+    
+}
+
+#pragma mark - 设置刷新控件
 - (void)setupRefresh {
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         // 刷新数据
         [self loadData];
     }];
+    UIImageView *imgView = [[UIImageView alloc]init];
+    // 模拟图片
+    self.tableView.mj_header.wy_height += 60;
+    imgView.frame = self.tableView.mj_header.bounds;
+    [imgView setImage:[UIImage imageNamed:@"Snip20160522_1"]];
+    [self.tableView.mj_header addSubview:imgView];
+    
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         // 加载更多
         [self loadMoreDataWithPage:++self.page];
@@ -80,7 +111,7 @@
     self.tableView.mj_footer.hidden = YES;
 }
 
-// 加载数据
+#pragma mark - 加载数据
 - (void)loadData {
     // 1.弹窗
     [SVProgressHUD show];
@@ -134,7 +165,6 @@
 }
 
 
-
 #pragma mark - 代理方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSMutableArray *news = self.section[section];
@@ -160,9 +190,30 @@
     return 88;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self.transitionBar show];
+}
 
+// 向上滚则消失
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    if ((*targetContentOffset).y < 0) return; // 下拉刷新是不做动画
+    if ((*targetContentOffset).y > self.tableView.contentOffset.y) { // 向上滑动
+        [self.transitionBar dismiss];
+    }else {
+        [self.transitionBar show];
+    }
+}
 
+// 开始减速就显示
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self.transitionBar show];
+}
 
-
+// 设置透明度
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat scale = -scrollView.contentOffset.y / self.tableView.mj_header.wy_height;
+    self.tableView.mj_header.alpha = scale;
+}
 
 @end

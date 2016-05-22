@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134E004D1CF1E1E90065B041 /* WYTransionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 134E004C1CF1E1E90065B041 /* WYTransionBar.m */; };
+		134E004F1CF1E2020065B041 /* WYTransionBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134E004E1CF1E2020065B041 /* WYTransionBar.xib */; };
 		13CDDE5E1CF0AB3D0077CF5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDE5D1CF0AB3D0077CF5F /* main.m */; };
 		13CDDE611CF0AB3D0077CF5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDE601CF0AB3D0077CF5F /* AppDelegate.m */; };
 		13CDDE691CF0AB3D0077CF5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CDDE681CF0AB3D0077CF5F /* Assets.xcassets */; };
@@ -52,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		134E004B1CF1E1E90065B041 /* WYTransionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTransionBar.h; sourceTree = "<group>"; };
+		134E004C1CF1E1E90065B041 /* WYTransionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTransionBar.m; sourceTree = "<group>"; };
+		134E004E1CF1E2020065B041 /* WYTransionBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYTransionBar.xib; sourceTree = "<group>"; };
 		13CDDE591CF0AB3D0077CF5F /* WYTanZi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYTanZi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CDDE5D1CF0AB3D0077CF5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		13CDDE5F1CF0AB3D0077CF5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -276,6 +281,9 @@
 				13E427621CF1C8F700A3EBBF /* WYNewCell.h */,
 				13E427631CF1C8F700A3EBBF /* WYNewCell.m */,
 				13E427641CF1C8F700A3EBBF /* WYNewCell.xib */,
+				134E004B1CF1E1E90065B041 /* WYTransionBar.h */,
+				134E004C1CF1E1E90065B041 /* WYTransionBar.m */,
+				134E004E1CF1E2020065B041 /* WYTransionBar.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -500,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E427661CF1C8F700A3EBBF /* WYNewCell.xib in Resources */,
+				134E004F1CF1E2020065B041 /* WYTransionBar.xib in Resources */,
 				13CDDE691CF0AB3D0077CF5F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +588,7 @@
 				13CDDEC21CF0B99E0077CF5F /* UIImageView+WY.m in Sources */,
 				13E427651CF1C8F700A3EBBF /* WYNewCell.m in Sources */,
 				13CDDEC01CF0B99E0077CF5F /* UIColor+WY.m in Sources */,
+				134E004D1CF1E1E90065B041 /* WYTransionBar.m in Sources */,
 				13CDDEBB1CF0B99E0077CF5F /* NSArray+WY.m in Sources */,
 				13E427611CF1B3B900A3EBBF /* WYNewModel.m in Sources */,
 				13CDDEC31CF0B99E0077CF5F /* UITabBarItem+WY.m in Sources */,
