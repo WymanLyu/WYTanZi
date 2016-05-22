@@ -29,6 +29,9 @@
     self.window = window;
     [self.window makeKeyAndVisible];
     
+    // 4.通过应用设置全局状态栏隐藏
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     return YES;
 }
 

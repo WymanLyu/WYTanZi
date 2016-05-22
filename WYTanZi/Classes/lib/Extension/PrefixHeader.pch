@@ -13,6 +13,10 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #ifdef __OBJC__
 
+// ******************** 函数 ****************************
+#define URL() 
+
+
 // ******************** 尺寸宏 ****************************
 #define IPHONE6_PLUS_SCREENSIZE CGSizeMake(414, 736)
 #define IPHONE6_SCREENSIZE CGSizeMake(375, 667)
@@ -36,12 +40,15 @@
 #endif
 // ******************** 头文件 **************************
 #import "WYExtension.h"
+#import "WYNetTool.h"
+#import "WYConstValue.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <SVProgressHUD.h>
 #import <UIImageView+WebCache.h>
 #import <Masonry.h>
-///Users/Sialice/Documents/IOS学习/GitHub/WYTanZi/WYTanZi/Classes/lib/Extension/PrefixHeader.pch
+#import <MJRefresh.h>
+
 
 #endif
 

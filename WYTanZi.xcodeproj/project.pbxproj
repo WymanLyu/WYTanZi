@@ -10,7 +10,6 @@
 		13CDDE5E1CF0AB3D0077CF5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDE5D1CF0AB3D0077CF5F /* main.m */; };
 		13CDDE611CF0AB3D0077CF5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDE601CF0AB3D0077CF5F /* AppDelegate.m */; };
 		13CDDE691CF0AB3D0077CF5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CDDE681CF0AB3D0077CF5F /* Assets.xcassets */; };
-		13CDDE6C1CF0AB3D0077CF5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CDDE6A1CF0AB3D0077CF5F /* LaunchScreen.storyboard */; };
 		13CDDE771CF0AB3D0077CF5F /* WYTanZiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDE761CF0AB3D0077CF5F /* WYTanZiTests.m */; };
 		13CDDE821CF0AB3E0077CF5F /* WYTanZiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDE811CF0AB3E0077CF5F /* WYTanZiUITests.m */; };
 		13CDDEA01CF0B4A50077CF5F /* WYGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDE9F1CF0B4A50077CF5F /* WYGuideViewController.m */; };
@@ -25,6 +24,13 @@
 		13CDDEC21CF0B99E0077CF5F /* UIImageView+WY.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDEB51CF0B99E0077CF5F /* UIImageView+WY.m */; };
 		13CDDEC31CF0B99E0077CF5F /* UITabBarItem+WY.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDEB71CF0B99E0077CF5F /* UITabBarItem+WY.m */; };
 		13CDDEC41CF0B99E0077CF5F /* UIView+WY.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDEB91CF0B99E0077CF5F /* UIView+WY.m */; };
+		13E427521CF152BD00A3EBBF /* WYNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427511CF152BD00A3EBBF /* WYNetTool.m */; };
+		13E427551CF152D900A3EBBF /* WYConstValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427541CF152D900A3EBBF /* WYConstValue.m */; };
+		13E427581CF15C8000A3EBBF /* NSDictionary+WY.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427571CF15C8000A3EBBF /* NSDictionary+WY.m */; };
+		13E4275B1CF1A8E600A3EBBF /* WYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E4275A1CF1A8E600A3EBBF /* WYHomeViewController.m */; };
+		13E427611CF1B3B900A3EBBF /* WYNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427601CF1B3B900A3EBBF /* WYNewModel.m */; };
+		13E427651CF1C8F700A3EBBF /* WYNewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427631CF1C8F700A3EBBF /* WYNewCell.m */; };
+		13E427661CF1C8F700A3EBBF /* WYNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E427641CF1C8F700A3EBBF /* WYNewCell.xib */; };
 		B090A35646889AED649686C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41070A5C45EAA0D9D52F2A27 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +57,6 @@
 		13CDDE5F1CF0AB3D0077CF5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13CDDE601CF0AB3D0077CF5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		13CDDE681CF0AB3D0077CF5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		13CDDE6B1CF0AB3D0077CF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13CDDE6D1CF0AB3D0077CF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13CDDE721CF0AB3D0077CF5F /* WYTanZiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYTanZiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CDDE761CF0AB3D0077CF5F /* WYTanZiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYTanZiTests.m; sourceTree = "<group>"; };
@@ -85,6 +90,19 @@
 		13CDDEB81CF0B99E0077CF5F /* UIView+WY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WY.h"; sourceTree = "<group>"; };
 		13CDDEB91CF0B99E0077CF5F /* UIView+WY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WY.m"; sourceTree = "<group>"; };
 		13CDDEBA1CF0B99E0077CF5F /* WYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYExtension.h; sourceTree = "<group>"; };
+		13E427501CF152BD00A3EBBF /* WYNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetTool.h; sourceTree = "<group>"; };
+		13E427511CF152BD00A3EBBF /* WYNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetTool.m; sourceTree = "<group>"; };
+		13E427531CF152D900A3EBBF /* WYConstValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYConstValue.h; sourceTree = "<group>"; };
+		13E427541CF152D900A3EBBF /* WYConstValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYConstValue.m; sourceTree = "<group>"; };
+		13E427561CF15C8000A3EBBF /* NSDictionary+WY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WY.h"; sourceTree = "<group>"; };
+		13E427571CF15C8000A3EBBF /* NSDictionary+WY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WY.m"; sourceTree = "<group>"; };
+		13E427591CF1A8E600A3EBBF /* WYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYHomeViewController.h; sourceTree = "<group>"; };
+		13E4275A1CF1A8E600A3EBBF /* WYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHomeViewController.m; sourceTree = "<group>"; };
+		13E4275F1CF1B3B900A3EBBF /* WYNewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewModel.h; sourceTree = "<group>"; };
+		13E427601CF1B3B900A3EBBF /* WYNewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewModel.m; sourceTree = "<group>"; };
+		13E427621CF1C8F700A3EBBF /* WYNewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewCell.h; sourceTree = "<group>"; };
+		13E427631CF1C8F700A3EBBF /* WYNewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewCell.m; sourceTree = "<group>"; };
+		13E427641CF1C8F700A3EBBF /* WYNewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewCell.xib; sourceTree = "<group>"; };
 		41070A5C45EAA0D9D52F2A27 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1BE7F29A2C35C136A88E71 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		863BC90FB3E59F626058962A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,7 +171,6 @@
 		13CDDE5C1CF0AB3D0077CF5F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				13CDDE6A1CF0AB3D0077CF5F /* LaunchScreen.storyboard */,
 				13CDDE6D1CF0AB3D0077CF5F /* Info.plist */,
 				13CDDE681CF0AB3D0077CF5F /* Assets.xcassets */,
 				13CDDE5D1CF0AB3D0077CF5F /* main.m */,
@@ -182,6 +199,7 @@
 		13CDDE8F1CF0B0770077CF5F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				13E4274F1CF1527E00A3EBBF /* Global[全局] */,
 				13CDDE9D1CF0B4600077CF5F /* Base[主框架] */,
 				13CDDE941CF0B0770077CF5F /* Home[主页] */,
 				13CDDE991CF0B0770077CF5F /* Mine[我的] */,
@@ -237,6 +255,8 @@
 		13CDDE951CF0B0770077CF5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				13E427591CF1A8E600A3EBBF /* WYHomeViewController.h */,
+				13E4275A1CF1A8E600A3EBBF /* WYHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +264,8 @@
 		13CDDE961CF0B0770077CF5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				13E4275F1CF1B3B900A3EBBF /* WYNewModel.h */,
+				13E427601CF1B3B900A3EBBF /* WYNewModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,6 +273,9 @@
 		13CDDE971CF0B0770077CF5F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				13E427621CF1C8F700A3EBBF /* WYNewCell.h */,
+				13E427631CF1C8F700A3EBBF /* WYNewCell.m */,
+				13E427641CF1C8F700A3EBBF /* WYNewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,8 +356,22 @@
 				13CDDEB81CF0B99E0077CF5F /* UIView+WY.h */,
 				13CDDEB91CF0B99E0077CF5F /* UIView+WY.m */,
 				13CDDEBA1CF0B99E0077CF5F /* WYExtension.h */,
+				13E427561CF15C8000A3EBBF /* NSDictionary+WY.h */,
+				13E427571CF15C8000A3EBBF /* NSDictionary+WY.m */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		13E4274F1CF1527E00A3EBBF /* Global[全局] */ = {
+			isa = PBXGroup;
+			children = (
+				13E427501CF152BD00A3EBBF /* WYNetTool.h */,
+				13E427511CF152BD00A3EBBF /* WYNetTool.m */,
+				13E427531CF152D900A3EBBF /* WYConstValue.h */,
+				13E427541CF152D900A3EBBF /* WYConstValue.m */,
+			);
+			name = "Global[全局]";
+			path = Global;
 			sourceTree = "<group>";
 		};
 		3503661903235F8D36EB5386 /* Frameworks */ = {
@@ -423,6 +462,7 @@
 				TargetAttributes = {
 					13CDDE581CF0AB3D0077CF5F = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 3DD9JXA5GV;
 					};
 					13CDDE711CF0AB3D0077CF5F = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -459,7 +499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13CDDE6C1CF0AB3D0077CF5F /* LaunchScreen.storyboard in Resources */,
+				13E427661CF1C8F700A3EBBF /* WYNewCell.xib in Resources */,
 				13CDDE691CF0AB3D0077CF5F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,14 +577,20 @@
 				13CDDEBD1CF0B99E0077CF5F /* NSFileManager+WY.m in Sources */,
 				13CDDEC41CF0B99E0077CF5F /* UIView+WY.m in Sources */,
 				13CDDEC21CF0B99E0077CF5F /* UIImageView+WY.m in Sources */,
+				13E427651CF1C8F700A3EBBF /* WYNewCell.m in Sources */,
 				13CDDEC01CF0B99E0077CF5F /* UIColor+WY.m in Sources */,
 				13CDDEBB1CF0B99E0077CF5F /* NSArray+WY.m in Sources */,
+				13E427611CF1B3B900A3EBBF /* WYNewModel.m in Sources */,
 				13CDDEC31CF0B99E0077CF5F /* UITabBarItem+WY.m in Sources */,
 				13CDDEA01CF0B4A50077CF5F /* WYGuideViewController.m in Sources */,
+				13E427521CF152BD00A3EBBF /* WYNetTool.m in Sources */,
+				13E427581CF15C8000A3EBBF /* NSDictionary+WY.m in Sources */,
 				13CDDEBE1CF0B99E0077CF5F /* NSString+WY.m in Sources */,
 				13CDDEBF1CF0B99E0077CF5F /* UIBarButtonItem+WY.m in Sources */,
 				13CDDE611CF0AB3D0077CF5F /* AppDelegate.m in Sources */,
 				13CDDEA31CF0B5030077CF5F /* WYBaseNavigationViewController.m in Sources */,
+				13E427551CF152D900A3EBBF /* WYConstValue.m in Sources */,
+				13E4275B1CF1A8E600A3EBBF /* WYHomeViewController.m in Sources */,
 				13CDDEBC1CF0B99E0077CF5F /* NSDate+WY.m in Sources */,
 				13CDDE5E1CF0AB3D0077CF5F /* main.m in Sources */,
 			);
@@ -580,17 +626,6 @@
 			targetProxy = 13CDDE7E1CF0AB3D0077CF5F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		13CDDE6A1CF0AB3D0077CF5F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13CDDE6B1CF0AB3D0077CF5F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		13CDDE841CF0AB3E0077CF5F /* Debug */ = {
@@ -680,6 +715,9 @@
 			baseConfigurationReference = 4C1BE7F29A2C35C136A88E71 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WYTanZi/Classes/lib/Extension/PrefixHeader.pch;
 				INFOPLIST_FILE = WYTanZi/Info.plist;
@@ -687,6 +725,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyman.WYTanZi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -695,6 +734,9 @@
 			baseConfigurationReference = 863BC90FB3E59F626058962A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WYTanZi/Classes/lib/Extension/PrefixHeader.pch;
 				INFOPLIST_FILE = WYTanZi/Info.plist;
@@ -702,6 +744,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyman.WYTanZi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

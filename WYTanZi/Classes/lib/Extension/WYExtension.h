@@ -19,6 +19,7 @@
 #import "UIBarButtonItem+WY.h"
 #import "NSFileManager+WY.h"
 #import "NSDate+WY.h"
+#import "NSDictionary+WY.h"
 
 
 
