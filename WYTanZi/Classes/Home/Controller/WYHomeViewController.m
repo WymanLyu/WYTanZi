@@ -47,6 +47,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.tableView.backgroundColor = [UIColor whiteColor];
     
     // 1.设置轮播图
     [self setupAdView];
@@ -59,6 +60,11 @@
     
     // 4.上拉刷新
     [self setupRefresh];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.tableView.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma  mark - 懒加载

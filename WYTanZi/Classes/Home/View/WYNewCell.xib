@@ -16,10 +16,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KzC-Vy-SgP">
-                        <rect key="frame" x="10" y="5" width="125" height="82"/>
+                        <rect key="frame" x="10" y="8" width="143" height="76"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sut-wS-qDN">
-                        <rect key="frame" x="140" y="15" width="208" height="38"/>
+                        <rect key="frame" x="158" y="15" width="190" height="38"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="38" id="3DE-1Y-Gm9"/>
                         </constraints>
@@ -28,13 +28,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="奇葩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcu-Zv-fea">
-                        <rect key="frame" x="140" y="63" width="24" height="15"/>
+                        <rect key="frame" x="158" y="63" width="24" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="1" green="0.7809627026" blue="0.087076741779999994" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGr-Hp-div">
-                        <rect key="frame" x="166" y="64" width="1" height="13"/>
+                        <rect key="frame" x="184" y="64" width="1" height="13"/>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="1" id="JuF-kM-xng"/>
@@ -42,7 +42,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="谈资搬迁队" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znT-7y-4LV">
-                        <rect key="frame" x="169" y="63" width="60" height="15"/>
+                        <rect key="frame" x="187" y="63" width="60" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -64,10 +64,10 @@
                     <constraint firstItem="LGr-Hp-div" firstAttribute="leading" secondItem="Zcu-Zv-fea" secondAttribute="trailing" constant="2" id="cKT-Ds-QcN"/>
                     <constraint firstItem="znT-7y-4LV" firstAttribute="centerY" secondItem="Zcu-Zv-fea" secondAttribute="centerY" id="ffv-Ta-JGk"/>
                     <constraint firstItem="Sut-wS-qDN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="gc8-oG-0vs"/>
-                    <constraint firstItem="KzC-Vy-SgP" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.35" id="j2i-9O-5Kl"/>
+                    <constraint firstItem="KzC-Vy-SgP" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="j2i-9O-5Kl"/>
                     <constraint firstItem="Zcu-Zv-fea" firstAttribute="leading" secondItem="KzC-Vy-SgP" secondAttribute="trailing" constant="5" id="ltS-0R-0Ys"/>
-                    <constraint firstAttribute="bottom" secondItem="KzC-Vy-SgP" secondAttribute="bottom" constant="5" id="nfe-rD-Rd7"/>
-                    <constraint firstItem="KzC-Vy-SgP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="tRb-dl-VdI"/>
+                    <constraint firstAttribute="bottom" secondItem="KzC-Vy-SgP" secondAttribute="bottom" constant="8" id="nfe-rD-Rd7"/>
+                    <constraint firstItem="KzC-Vy-SgP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tRb-dl-VdI"/>
                     <constraint firstItem="znT-7y-4LV" firstAttribute="leading" secondItem="LGr-Hp-div" secondAttribute="trailing" constant="2" id="uyW-dm-vqP"/>
                     <constraint firstItem="LGr-Hp-div" firstAttribute="centerY" secondItem="Zcu-Zv-fea" secondAttribute="centerY" id="vRt-7D-9AP"/>
                 </constraints>
