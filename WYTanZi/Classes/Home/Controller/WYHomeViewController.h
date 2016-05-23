@@ -10,4 +10,7 @@
 
 @interface WYHomeViewController : UITableViewController
 
+/** 转场按钮 */
+@property (nonatomic, weak) UIButton *transitionBtn;
+
 @end

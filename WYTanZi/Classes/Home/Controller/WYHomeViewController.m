@@ -11,12 +11,15 @@
 #import "WYNewModel.h"
 #import "WYNewCell.h"
 #import "WYTransionBar.h"
+#import "WYBannerViewController.h"
+#import "WYMineViewController.h"
+#import "PingTransition.h"
 
 
 #define HomeUrl @"http://www.cdsb.mobi/cdsb/app/ios/pacong"
 #define MoreUrl @"http://www.cdsb.mobi/cdsb/app/ios/pacong/pcgd/"
 
-@interface WYHomeViewController ()
+@interface WYHomeViewController ()<UINavigationControllerDelegate>
 
 /** 模型分组 */
 @property (nonatomic, strong) NSArray *section;
@@ -26,6 +29,11 @@
 
 /** 悬浮bar */
 @property (nonatomic, weak) WYTransionBar *transitionBar;
+
+/** 记录原来的nav代理 */
+@property (nonatomic, weak) id<UINavigationControllerDelegate> originDelegate;
+
+
 
 @end
 
@@ -62,9 +70,23 @@
     [self setupRefresh];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [WYTransionBar transitionBar].hidden = NO;
+    self.originDelegate = self.navigationController.delegate;
+    self.navigationController.delegate = self;
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.tableView.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [WYTransionBar transitionBar].hidden = YES;
+    self.navigationController.delegate = self.originDelegate;
+    self.originDelegate = nil;
 }
 
 #pragma  mark - 懒加载
@@ -88,12 +110,56 @@
 #pragma mark - 设置转场按钮
 - (void)setupTransitionBtn {
     // 创建bar
-    WYTransionBar *bar = [WYTransionBar transitionBar];
+    WYTransionBar *bar = [WYTransionBar transitionBarWithMineClick:^(UIButton *mineBtn) {
+        // 我的按钮点击
+        [UIView animateKeyframesWithDuration:0.35f delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
+            // 缩放
+            mineBtn.transform = CGAffineTransformMakeScale(0.001, 0.001);
+            
+        } completion:^(BOOL finished) {
+            [UIView animateKeyframesWithDuration:0.35f delay:0 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
+                // 放大
+                mineBtn.transform = CGAffineTransformIdentity;
+            } completion:^(BOOL finished) {
+                WYLog(@"zhaunchang ///");
+                self.transitionBtn = mineBtn;
+                [WYTransionBar transitionBar].hidden = YES;
+                WYMineViewController *vc = [[WYMineViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
+            }];
+        }];
+        
+        
+    } moreClick:^(UIButton *moreBtn) {
+        // 更多按钮点击
+        WYprintf(@"more ==");
+        moreBtn.layer.anchorPoint = CGPointMake(0.5, 0.5);
+        // 1.按钮缩放动画
+        [UIView animateKeyframesWithDuration:0.35f delay:0 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
+            // 缩放
+            moreBtn.transform = CGAffineTransformMakeScale(0.001, 0.001);
+            
+        } completion:^(BOOL finished) {
+            [UIView animateKeyframesWithDuration:0.35 delay:0 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
+                // 放大
+                moreBtn.transform = CGAffineTransformIdentity;
+            } completion:^(BOOL finished) {
+                WYLog(@"zhaunchang ///");
+                [WYTransionBar transitionBar].hidden = YES;
+                self.transitionBtn = moreBtn;
+                WYBannerViewController *vc = [[WYBannerViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
+            }];
+        }];
+        
+        
+       
+       
+    }];
     
     // 设置尺寸
     self.transitionBar = bar;
-//    [self.view.window addSubview:bar];
-    
+
 }
 
 #pragma mark - 设置刷新控件
@@ -220,6 +286,21 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat scale = -scrollView.contentOffset.y / self.tableView.mj_header.wy_height;
     self.tableView.mj_header.alpha = scale;
+}
+
+#pragma mark - UINavigationControllerDelegate
+- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC{
+    if (operation == UINavigationControllerOperationPush) {
+        
+        PingTransition *ping = [PingTransition new];
+        ping.clickedBtn = self.transitionBtn;
+        return ping;
+    }else{
+        return nil;
+    }
 }
 
 @end

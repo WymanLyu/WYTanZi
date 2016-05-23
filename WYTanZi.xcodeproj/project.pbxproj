@@ -26,6 +26,10 @@
 		13CDDEC21CF0B99E0077CF5F /* UIImageView+WY.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDEB51CF0B99E0077CF5F /* UIImageView+WY.m */; };
 		13CDDEC31CF0B99E0077CF5F /* UITabBarItem+WY.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDEB71CF0B99E0077CF5F /* UITabBarItem+WY.m */; };
 		13CDDEC41CF0B99E0077CF5F /* UIView+WY.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDEB91CF0B99E0077CF5F /* UIView+WY.m */; };
+		13D1FBEE1CF3115700456FA0 /* WYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D1FBED1CF3115700456FA0 /* WYMineViewController.m */; };
+		13D1FBF41CF3118600456FA0 /* PingInvertTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D1FBF11CF3118600456FA0 /* PingInvertTransition.m */; };
+		13D1FBF51CF3118600456FA0 /* PingTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D1FBF31CF3118600456FA0 /* PingTransition.m */; };
+		13D1FC3F1CF32AC000456FA0 /* WYBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D1FC3E1CF32AC000456FA0 /* WYBannerViewController.m */; };
 		13E427521CF152BD00A3EBBF /* WYNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427511CF152BD00A3EBBF /* WYNetTool.m */; };
 		13E427551CF152D900A3EBBF /* WYConstValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427541CF152D900A3EBBF /* WYConstValue.m */; };
 		13E427581CF15C8000A3EBBF /* NSDictionary+WY.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427571CF15C8000A3EBBF /* NSDictionary+WY.m */; };
@@ -95,6 +99,14 @@
 		13CDDEB81CF0B99E0077CF5F /* UIView+WY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WY.h"; sourceTree = "<group>"; };
 		13CDDEB91CF0B99E0077CF5F /* UIView+WY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WY.m"; sourceTree = "<group>"; };
 		13CDDEBA1CF0B99E0077CF5F /* WYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYExtension.h; sourceTree = "<group>"; };
+		13D1FBEC1CF3115700456FA0 /* WYMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYMineViewController.h; sourceTree = "<group>"; };
+		13D1FBED1CF3115700456FA0 /* WYMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYMineViewController.m; sourceTree = "<group>"; };
+		13D1FBF01CF3118600456FA0 /* PingInvertTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingInvertTransition.h; sourceTree = "<group>"; };
+		13D1FBF11CF3118600456FA0 /* PingInvertTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingInvertTransition.m; sourceTree = "<group>"; };
+		13D1FBF21CF3118600456FA0 /* PingTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingTransition.h; sourceTree = "<group>"; };
+		13D1FBF31CF3118600456FA0 /* PingTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingTransition.m; sourceTree = "<group>"; };
+		13D1FC3D1CF32AC000456FA0 /* WYBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYBannerViewController.h; sourceTree = "<group>"; };
+		13D1FC3E1CF32AC000456FA0 /* WYBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYBannerViewController.m; sourceTree = "<group>"; };
 		13E427501CF152BD00A3EBBF /* WYNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetTool.h; sourceTree = "<group>"; };
 		13E427511CF152BD00A3EBBF /* WYNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetTool.m; sourceTree = "<group>"; };
 		13E427531CF152D900A3EBBF /* WYConstValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYConstValue.h; sourceTree = "<group>"; };
@@ -228,6 +240,8 @@
 		13CDDE911CF0B0770077CF5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				13D1FC3D1CF32AC000456FA0 /* WYBannerViewController.h */,
+				13D1FC3E1CF32AC000456FA0 /* WYBannerViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +263,7 @@
 		13CDDE941CF0B0770077CF5F /* Home[主页] */ = {
 			isa = PBXGroup;
 			children = (
+				13D1FBEF1CF3117100456FA0 /* Animator */,
 				13CDDE951CF0B0770077CF5F /* Controller */,
 				13CDDE961CF0B0770077CF5F /* Model */,
 				13CDDE971CF0B0770077CF5F /* View */,
@@ -310,6 +325,8 @@
 		13CDDE9A1CF0B0770077CF5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				13D1FBEC1CF3115700456FA0 /* WYMineViewController.h */,
+				13D1FBED1CF3115700456FA0 /* WYMineViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,6 +385,17 @@
 				13E427571CF15C8000A3EBBF /* NSDictionary+WY.m */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		13D1FBEF1CF3117100456FA0 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				13D1FBF01CF3118600456FA0 /* PingInvertTransition.h */,
+				13D1FBF11CF3118600456FA0 /* PingInvertTransition.m */,
+				13D1FBF21CF3118600456FA0 /* PingTransition.h */,
+				13D1FBF31CF3118600456FA0 /* PingTransition.m */,
+			);
+			name = Animator;
 			sourceTree = "<group>";
 		};
 		13E4274F1CF1527E00A3EBBF /* Global[全局] */ = {
@@ -582,14 +610,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13D1FC3F1CF32AC000456FA0 /* WYBannerViewController.m in Sources */,
 				13CDDEC11CF0B99E0077CF5F /* UIImage+WY.m in Sources */,
+				13D1FBF41CF3118600456FA0 /* PingInvertTransition.m in Sources */,
 				13CDDEBD1CF0B99E0077CF5F /* NSFileManager+WY.m in Sources */,
 				13CDDEC41CF0B99E0077CF5F /* UIView+WY.m in Sources */,
+				13D1FBF51CF3118600456FA0 /* PingTransition.m in Sources */,
 				13CDDEC21CF0B99E0077CF5F /* UIImageView+WY.m in Sources */,
 				13E427651CF1C8F700A3EBBF /* WYNewCell.m in Sources */,
 				13CDDEC01CF0B99E0077CF5F /* UIColor+WY.m in Sources */,
 				134E004D1CF1E1E90065B041 /* WYTransionBar.m in Sources */,
 				13CDDEBB1CF0B99E0077CF5F /* NSArray+WY.m in Sources */,
+				13D1FBEE1CF3115700456FA0 /* WYMineViewController.m in Sources */,
 				13E427611CF1B3B900A3EBBF /* WYNewModel.m in Sources */,
 				13CDDEC31CF0B99E0077CF5F /* UITabBarItem+WY.m in Sources */,
 				13CDDEA01CF0B4A50077CF5F /* WYGuideViewController.m in Sources */,

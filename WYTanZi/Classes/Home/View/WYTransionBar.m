@@ -13,10 +13,10 @@
 @end
 @interface WYTransionBarController : UIViewController
 
-
-
 @end
+
 static WYWindow *_window;
+
 @implementation WYTransionBarController
 - (void)loadView {
     // 加载view
@@ -38,6 +38,14 @@ static WYWindow *_window;
 
 @end
 
+@interface WYTransionBar ()
+
+/** block */
+@property (nonatomic, copy) void(^mineClick)(UIButton *mineBtn);
+@property (nonatomic, copy) void(^moreClick)(UIButton *moreBtn);
+
+@end
+
 
 @implementation WYTransionBar
 
@@ -48,7 +56,7 @@ static WYWindow *_window;
     dispatch_once(&onceToken, ^{
         CGRect frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 80, [UIScreen mainScreen].bounds.size.width, 64);
         WYWindow *window = [[WYWindow alloc] initWithFrame:frame];
-        window.windowLevel = UIWindowLevelAlert;
+        window.windowLevel = UIWindowLevelNormal;
         window.hidden = NO; // 这个坑爹的属性
         window.rootViewController = [[WYTransionBarController alloc] init];
         
@@ -58,16 +66,22 @@ static WYWindow *_window;
     return (WYTransionBar *)_window.rootViewController.view;
 }
 
++ (instancetype)transitionBarWithMineClick:(void(^)(UIButton *mineBtn))mineClick moreClick:(void(^)(UIButton *moreBtn))moreClick {
+    WYTransionBar *bar = [self transitionBar];
+    bar.mineClick = mineClick;
+    bar.moreClick = moreClick;
+    return bar;
+}
+
 
 /** 我的按钮点击 */
 - (IBAction)mineClick:(UIButton *)btn {
-    WYprintf(@"%s", __func__);
+    self.mineClick(btn);
 }
 
 /** 更多按钮点击 */
 - (IBAction)moreClick:(UIButton *)btn {
-    WYprintf(@"%s", __func__);
-
+    self.moreClick(btn);
 }
 
 

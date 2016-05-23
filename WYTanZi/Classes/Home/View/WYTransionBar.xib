@@ -3,41 +3,25 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WYTransionBarController"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="YBw-nQ-Xuz" customClass="WYTransionBar">
-            <rect key="frame" x="0.0" y="0.0" width="385" height="68"/>
+            <rect key="frame" x="0.0" y="0.0" width="378" height="66"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jq9-WQ-NBX">
-                    <rect key="frame" x="306" y="2" width="64" height="64"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJP-9U-A5w">
+                    <rect key="frame" x="15" y="13" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="64" id="BZq-PU-UFa"/>
-                        <constraint firstAttribute="height" constant="64" id="Xfa-Vm-zRm"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="more"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="32"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="moreClick:" destination="YBw-nQ-Xuz" eventType="touchUpInside" id="kc9-VM-VcM"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJP-9U-A5w">
-                    <rect key="frame" x="15" y="9" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="KQR-JE-AD4"/>
-                        <constraint firstAttribute="height" constant="50" id="wWd-tK-64A"/>
+                        <constraint firstAttribute="width" constant="40" id="KQR-JE-AD4"/>
+                        <constraint firstAttribute="height" constant="40" id="wWd-tK-64A"/>
                     </constraints>
                     <state key="normal" backgroundImage="mine"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="25"/>
+                            <integer key="value" value="20"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -45,22 +29,39 @@
                         <action selector="mineClick:" destination="YBw-nQ-Xuz" eventType="touchUpInside" id="lTR-eu-suU"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jq9-WQ-NBX">
+                    <rect key="frame" x="303" y="3" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="BZq-PU-UFa"/>
+                        <constraint firstAttribute="height" constant="60" id="Xfa-Vm-zRm"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="more"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="moreClick:" destination="YBw-nQ-Xuz" eventType="touchUpInside" id="kc9-VM-VcM"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="SJP-9U-A5w" firstAttribute="centerY" secondItem="YBw-nQ-Xuz" secondAttribute="centerY" id="2qU-Nj-UlQ"/>
-                <constraint firstAttribute="trailing" secondItem="Jq9-WQ-NBX" secondAttribute="trailing" constant="15" id="FP7-vp-DEu"/>
+                <constraint firstItem="Jq9-WQ-NBX" firstAttribute="centerX" secondItem="YBw-nQ-Xuz" secondAttribute="trailing" constant="-45" id="FDf-qr-D1G"/>
                 <constraint firstItem="Jq9-WQ-NBX" firstAttribute="centerY" secondItem="YBw-nQ-Xuz" secondAttribute="centerY" id="Yb0-dw-DN2"/>
-                <constraint firstItem="SJP-9U-A5w" firstAttribute="leading" secondItem="YBw-nQ-Xuz" secondAttribute="leading" constant="15" id="xZP-Hu-mhN"/>
+                <constraint firstItem="SJP-9U-A5w" firstAttribute="centerX" secondItem="YBw-nQ-Xuz" secondAttribute="leading" constant="35" id="ytS-Zf-JAe"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="588.5" y="76"/>
+            <point key="canvasLocation" x="585" y="75"/>
         </view>
     </objects>
     <resources>
-        <image name="mine" width="48" height="48"/>
-        <image name="more" width="68" height="68"/>
+        <image name="mine" width="40" height="40"/>
+        <image name="more" width="50" height="50"/>
     </resources>
 </document>

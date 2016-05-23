@@ -13,6 +13,9 @@
 /** 获取转场bar */
 + (instancetype)transitionBar;
 
+/** 获取转场bar */
++ (instancetype)transitionBarWithMineClick:(void(^)(UIButton *mineBtn))mineClick moreClick:(void(^)(UIButton *moreBtn))moreClick;
+
 /** 消失 */
 - (void)dismiss;
 

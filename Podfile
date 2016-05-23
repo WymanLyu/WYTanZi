@@ -9,6 +9,7 @@ pod 'MJExtension', '~> 3.0.10'
 pod 'SVProgressHUD', '~> 2.0-beta8'
 pod 'SDWebImage', '~> 3.7.5'
 pod 'Masonry', '~> 0.6.4'
+pod 'pop', '~> 1.0.9'
 
 
 target 'WYTanZi' do
