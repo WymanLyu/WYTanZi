@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		134E004D1CF1E1E90065B041 /* WYTransionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 134E004C1CF1E1E90065B041 /* WYTransionBar.m */; };
 		134E004F1CF1E2020065B041 /* WYTransionBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134E004E1CF1E2020065B041 /* WYTransionBar.xib */; };
+		138CB3D11CF53F7D006D5E0A /* WYWebBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138CB3D01CF53F7D006D5E0A /* WYWebBar.xib */; };
+		138CB3D41CF53F97006D5E0A /* WYWebBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 138CB3D31CF53F97006D5E0A /* WYWebBar.m */; };
 		13CDDE5E1CF0AB3D0077CF5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDE5D1CF0AB3D0077CF5F /* main.m */; };
 		13CDDE611CF0AB3D0077CF5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDE601CF0AB3D0077CF5F /* AppDelegate.m */; };
 		13CDDE691CF0AB3D0077CF5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CDDE681CF0AB3D0077CF5F /* Assets.xcassets */; };
@@ -37,6 +39,10 @@
 		13E427611CF1B3B900A3EBBF /* WYNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427601CF1B3B900A3EBBF /* WYNewModel.m */; };
 		13E427651CF1C8F700A3EBBF /* WYNewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427631CF1C8F700A3EBBF /* WYNewCell.m */; };
 		13E427661CF1C8F700A3EBBF /* WYNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E427641CF1C8F700A3EBBF /* WYNewCell.xib */; };
+		13E682491CF41EF8008F37DB /* WYMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E682481CF41EF8008F37DB /* WYMineViewController.xib */; };
+		13E6824B1CF444C6008F37DB /* WYBannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E6824A1CF444C6008F37DB /* WYBannerViewController.xib */; };
+		13E8A9101CF49A5800BBAEF8 /* WYDetailWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E8A90E1CF49A5800BBAEF8 /* WYDetailWebViewController.m */; };
+		13E8A9111CF49A5800BBAEF8 /* WYDetailWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E8A90F1CF49A5800BBAEF8 /* WYDetailWebViewController.xib */; };
 		B090A35646889AED649686C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41070A5C45EAA0D9D52F2A27 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +67,9 @@
 		134E004B1CF1E1E90065B041 /* WYTransionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTransionBar.h; sourceTree = "<group>"; };
 		134E004C1CF1E1E90065B041 /* WYTransionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTransionBar.m; sourceTree = "<group>"; };
 		134E004E1CF1E2020065B041 /* WYTransionBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYTransionBar.xib; sourceTree = "<group>"; };
+		138CB3D01CF53F7D006D5E0A /* WYWebBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYWebBar.xib; sourceTree = "<group>"; };
+		138CB3D21CF53F97006D5E0A /* WYWebBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWebBar.h; sourceTree = "<group>"; };
+		138CB3D31CF53F97006D5E0A /* WYWebBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWebBar.m; sourceTree = "<group>"; };
 		13CDDE591CF0AB3D0077CF5F /* WYTanZi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYTanZi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CDDE5D1CF0AB3D0077CF5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		13CDDE5F1CF0AB3D0077CF5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +129,11 @@
 		13E427621CF1C8F700A3EBBF /* WYNewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewCell.h; sourceTree = "<group>"; };
 		13E427631CF1C8F700A3EBBF /* WYNewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewCell.m; sourceTree = "<group>"; };
 		13E427641CF1C8F700A3EBBF /* WYNewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewCell.xib; sourceTree = "<group>"; };
+		13E682481CF41EF8008F37DB /* WYMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYMineViewController.xib; sourceTree = "<group>"; };
+		13E6824A1CF444C6008F37DB /* WYBannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYBannerViewController.xib; sourceTree = "<group>"; };
+		13E8A90D1CF49A5800BBAEF8 /* WYDetailWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYDetailWebViewController.h; sourceTree = "<group>"; };
+		13E8A90E1CF49A5800BBAEF8 /* WYDetailWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYDetailWebViewController.m; sourceTree = "<group>"; };
+		13E8A90F1CF49A5800BBAEF8 /* WYDetailWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYDetailWebViewController.xib; sourceTree = "<group>"; };
 		41070A5C45EAA0D9D52F2A27 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1BE7F29A2C35C136A88E71 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		863BC90FB3E59F626058962A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -242,6 +256,7 @@
 			children = (
 				13D1FC3D1CF32AC000456FA0 /* WYBannerViewController.h */,
 				13D1FC3E1CF32AC000456FA0 /* WYBannerViewController.m */,
+				13E6824A1CF444C6008F37DB /* WYBannerViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -277,6 +292,9 @@
 			children = (
 				13E427591CF1A8E600A3EBBF /* WYHomeViewController.h */,
 				13E4275A1CF1A8E600A3EBBF /* WYHomeViewController.m */,
+				13E8A90D1CF49A5800BBAEF8 /* WYDetailWebViewController.h */,
+				13E8A90E1CF49A5800BBAEF8 /* WYDetailWebViewController.m */,
+				13E8A90F1CF49A5800BBAEF8 /* WYDetailWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,6 +317,9 @@
 				134E004B1CF1E1E90065B041 /* WYTransionBar.h */,
 				134E004C1CF1E1E90065B041 /* WYTransionBar.m */,
 				134E004E1CF1E2020065B041 /* WYTransionBar.xib */,
+				138CB3D21CF53F97006D5E0A /* WYWebBar.h */,
+				138CB3D31CF53F97006D5E0A /* WYWebBar.m */,
+				138CB3D01CF53F7D006D5E0A /* WYWebBar.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,6 +348,7 @@
 			children = (
 				13D1FBEC1CF3115700456FA0 /* WYMineViewController.h */,
 				13D1FBED1CF3115700456FA0 /* WYMineViewController.m */,
+				13E682481CF41EF8008F37DB /* WYMineViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -536,8 +558,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E427661CF1C8F700A3EBBF /* WYNewCell.xib in Resources */,
+				13E682491CF41EF8008F37DB /* WYMineViewController.xib in Resources */,
 				134E004F1CF1E2020065B041 /* WYTransionBar.xib in Resources */,
+				138CB3D11CF53F7D006D5E0A /* WYWebBar.xib in Resources */,
 				13CDDE691CF0AB3D0077CF5F /* Assets.xcassets in Resources */,
+				13E8A9111CF49A5800BBAEF8 /* WYDetailWebViewController.xib in Resources */,
+				13E6824B1CF444C6008F37DB /* WYBannerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +640,7 @@
 				13CDDEC11CF0B99E0077CF5F /* UIImage+WY.m in Sources */,
 				13D1FBF41CF3118600456FA0 /* PingInvertTransition.m in Sources */,
 				13CDDEBD1CF0B99E0077CF5F /* NSFileManager+WY.m in Sources */,
+				138CB3D41CF53F97006D5E0A /* WYWebBar.m in Sources */,
 				13CDDEC41CF0B99E0077CF5F /* UIView+WY.m in Sources */,
 				13D1FBF51CF3118600456FA0 /* PingTransition.m in Sources */,
 				13CDDEC21CF0B99E0077CF5F /* UIImageView+WY.m in Sources */,
@@ -630,6 +657,7 @@
 				13CDDEBE1CF0B99E0077CF5F /* NSString+WY.m in Sources */,
 				13CDDEBF1CF0B99E0077CF5F /* UIBarButtonItem+WY.m in Sources */,
 				13CDDE611CF0AB3D0077CF5F /* AppDelegate.m in Sources */,
+				13E8A9101CF49A5800BBAEF8 /* WYDetailWebViewController.m in Sources */,
 				13CDDEA31CF0B5030077CF5F /* WYBaseNavigationViewController.m in Sources */,
 				13E427551CF152D900A3EBBF /* WYConstValue.m in Sources */,
 				13E4275B1CF1A8E600A3EBBF /* WYHomeViewController.m in Sources */,

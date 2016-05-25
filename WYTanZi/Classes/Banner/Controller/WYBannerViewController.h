@@ -1,3 +1,4 @@
+
 //
 //  WYBannerViewController.h
 //  WYBannerViewController
@@ -9,6 +10,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WYBannerViewController : UIViewController<UINavigationControllerDelegate>
-@property (weak, nonatomic) UIButton *button;
+
 
 @end

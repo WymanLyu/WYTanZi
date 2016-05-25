@@ -34,7 +34,7 @@
 #warning 额外修改的 转换坐标 以便window的bar坐标被识别
     UIButton *button = self.clickedBtn;
     CGPoint point = button.frame.origin;
-    CGRect convertFrame = [button convertRect:button.bounds toView:fromVC.view];
+    CGRect convertFrame = [button convertRect:button.bounds toView:fromVC.view.window];
 #warning 额外修改
     
 //    CGRect convertFrame = button.frame; 原始的
@@ -70,9 +70,8 @@
     }
     
     
-    
     CGFloat radius = sqrt((finalPoint.x * finalPoint.x) + (finalPoint.y * finalPoint.y));
-    UIBezierPath *maskFinalBP = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(convertFrame, -radius, -radius)];
+    UIBezierPath *maskFinalBP = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(convertFrame, -radius * 1.5, -radius * 1.5)];
     
     
     //创建一个 CAShapeLayer 来负责展示圆形遮盖

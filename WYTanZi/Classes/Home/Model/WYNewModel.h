@@ -44,7 +44,7 @@
 @property (nonatomic, assign) long long time;
 
 /** 新闻id */
-@property (nonatomic, assign) int indexId;
+@property (nonatomic, assign) int newsId;
 
 /** 标题 */
 @property (nonatomic, copy) NSString *title;

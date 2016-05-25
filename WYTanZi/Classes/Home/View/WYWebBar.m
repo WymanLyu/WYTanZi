@@ -1,33 +1,33 @@
 //
-//  WYTransionBar.m
+//  WYWebBar.m
 //  WYTanZi
 //
-//  Created by sialice on 16/5/22.
+//  Created by sialice on 16/5/25.
 //  Copyright © 2016年 wyman. All rights reserved.
 //
 
-#import "WYTransionBar.h"
+#import "WYWebBar.h"
 
-@interface WYWindow : UIWindow
-
-@end
-@interface WYTransionBarController : UIViewController
+@interface WYWebWindow : UIWindow
 
 @end
+@interface WYWebBarController : UIViewController
 
-static WYWindow *_window;
+@end
 
-@implementation WYTransionBarController
+static WYWebWindow *_window;
+
+@implementation WYWebBarController
 - (void)loadView {
     // 加载view
-    WYTransionBar *bar = [[NSBundle mainBundle] loadNibNamed:@"WYTransionBar" owner:self options:nil].lastObject;
+    WYWebBar *bar = [[NSBundle mainBundle] loadNibNamed:@"WYWebBar" owner:self options:nil].lastObject;
     self.view = bar;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     CGRect frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64);
- 
+    
     self.view.frame = frame;
 }
 
@@ -38,51 +38,62 @@ static WYWindow *_window;
 
 @end
 
-@interface WYTransionBar ()
+@interface WYWebBar ()
 
 /** block */
-@property (nonatomic, copy) void(^mineClick)(UIButton *mineBtn);
-@property (nonatomic, copy) void(^moreClick)(UIButton *moreBtn);
+@property (nonatomic, copy) void(^backClick)(UIButton *backBtn);
 
 @end
 
 
-@implementation WYTransionBar
+@implementation WYWebBar
 
-+ (instancetype)transitionBar{
++ (instancetype)webBar{
     
     // 创建window
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         CGRect frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 80, [UIScreen mainScreen].bounds.size.width, 64);
-        WYWindow *window = [[WYWindow alloc] initWithFrame:frame];
+        WYWebWindow *window = [[WYWebWindow alloc] initWithFrame:frame];
         window.windowLevel = UIWindowLevelNormal;
         window.hidden = NO; // 这个坑爹的属性
-        window.rootViewController = [[WYTransionBarController alloc] init];
+        window.rootViewController = [[WYWebBarController alloc] init];
         
         _window = window;
     });
     
-    return (WYTransionBar *)_window.rootViewController.view;
+    return (WYWebBar *)_window.rootViewController.view;
 }
 
-+ (instancetype)transitionBarWithMineClick:(void(^)(UIButton *mineBtn))mineClick moreClick:(void(^)(UIButton *moreBtn))moreClick {
-    WYTransionBar *bar = [self transitionBar];
-    bar.mineClick = mineClick;
-    bar.moreClick = moreClick;
++ (instancetype)webBarWithBackClick:(void(^)(UIButton *backBtn))backClick {
+    WYWebBar *bar = [self webBar];
+    bar.backClick = backClick;
     return bar;
+}
+
+- (void)dead {
+    _window.alpha = 0.001;
 }
 
 
 /** 我的按钮点击 */
-- (IBAction)mineClick:(UIButton *)btn {
-    self.mineClick(btn);
+
+- (IBAction)backClick:(id)sender {
+    self.backClick(sender);
 }
 
-/** 更多按钮点击 */
-- (IBAction)moreClick:(UIButton *)btn {
-    self.moreClick(btn);
+- (IBAction)commitClick:(id)sender {
+    
 }
+
+- (IBAction)favoriteClick:(id)sender {
+    
+}
+
+- (IBAction)shareClick:(id)sender {
+    
+}
+
 
 
 - (void)dismiss {
@@ -92,6 +103,7 @@ static WYWindow *_window;
 }
 
 - (void)show {
+    _window.alpha = 1.0;
     [UIView animateWithDuration:0.35f delay:0.001 usingSpringWithDamping:0.65 initialSpringVelocity:5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         _window.wy_top = [UIScreen mainScreen].bounds.size.height - 80;
     } completion:nil];
@@ -99,19 +111,16 @@ static WYWindow *_window;
 
 @end
 
-
-
-
-@implementation WYWindow
+@implementation WYWebWindow
 
 // 拦截触摸事件
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     // 仅当事件在按钮上才处理
     BOOL isHandle = CGRectContainsPoint(CGRectMake(15, 0, 50, 80), point) || CGRectContainsPoint(CGRectMake([UIScreen mainScreen].bounds.size.width - 80, 0, 50, 80), point);
     if (!isHandle) return nil;
-
+    
     return [super hitTest:point withEvent:event];
-
+    
 }
 
 - (void)setHidden:(BOOL)hidden {
@@ -125,8 +134,6 @@ static WYWindow *_window;
     [super setHidden:hidden];
 }
 
+
+
 @end
-
-
-
-

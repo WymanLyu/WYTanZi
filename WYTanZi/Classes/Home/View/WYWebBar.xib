@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ofk-Mv-vTE" customClass="WYWebBar">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O6-Qx-IqD">
+                    <rect key="frame" x="253" y="13" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="PiD-ga-3Qh"/>
+                        <constraint firstAttribute="height" constant="40" id="TEz-fk-TRQ"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="favorite"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="favoriteClick:" destination="Ofk-Mv-vTE" eventType="touchUpInside" id="4zH-In-IAi"/>
+                        <action selector="mineClick:" destination="Ofk-Mv-vTE" eventType="touchUpInside" id="RFc-dL-a0u"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNB-4M-9eP">
+                    <rect key="frame" x="303" y="3" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="lcm-zF-LQg"/>
+                        <constraint firstAttribute="width" constant="60" id="llk-NK-0fG"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="share"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="shareClick:" destination="Ofk-Mv-vTE" eventType="touchUpInside" id="76U-Lw-nXf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nX-A5-xnw">
+                    <rect key="frame" x="203" y="13" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Y0N-gh-ava"/>
+                        <constraint firstAttribute="height" constant="40" id="oVs-fd-lVS"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="commit"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="commitClick:" destination="Ofk-Mv-vTE" eventType="touchUpInside" id="G8c-sx-m9M"/>
+                        <action selector="mineClick:" destination="Ofk-Mv-vTE" eventType="touchUpInside" id="Hep-bt-rSt"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-wr-9wB">
+                    <rect key="frame" x="15" y="13" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="6gh-Gf-XhV"/>
+                        <constraint firstAttribute="width" constant="40" id="Ou1-fh-oAp"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="back"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="backClick:" destination="Ofk-Mv-vTE" eventType="touchUpInside" id="UOc-zu-WJS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1O6-Qx-IqD" firstAttribute="leading" secondItem="2nX-A5-xnw" secondAttribute="trailing" constant="10" id="4A0-Zf-Sag"/>
+                <constraint firstItem="zOo-wr-9wB" firstAttribute="centerX" secondItem="Ofk-Mv-vTE" secondAttribute="leading" constant="35" id="4F9-H7-66t"/>
+                <constraint firstItem="zOo-wr-9wB" firstAttribute="centerY" secondItem="Ofk-Mv-vTE" secondAttribute="centerY" id="Emq-Bu-2Xr"/>
+                <constraint firstItem="1O6-Qx-IqD" firstAttribute="centerY" secondItem="Ofk-Mv-vTE" secondAttribute="centerY" id="J1E-IZ-NLa"/>
+                <constraint firstItem="SNB-4M-9eP" firstAttribute="centerX" secondItem="Ofk-Mv-vTE" secondAttribute="trailing" constant="-45" id="VAA-6E-uID"/>
+                <constraint firstItem="SNB-4M-9eP" firstAttribute="centerY" secondItem="Ofk-Mv-vTE" secondAttribute="centerY" id="lha-Xa-KTJ"/>
+                <constraint firstItem="2nX-A5-xnw" firstAttribute="centerY" secondItem="Ofk-Mv-vTE" secondAttribute="centerY" id="pSE-jE-qTb"/>
+                <constraint firstItem="SNB-4M-9eP" firstAttribute="leading" secondItem="1O6-Qx-IqD" secondAttribute="trailing" constant="10" id="rvy-nx-vJM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="283" y="57"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="49" height="49"/>
+        <image name="commit" width="49" height="49"/>
+        <image name="favorite" width="49" height="49"/>
+        <image name="share" width="80" height="80"/>
+    </resources>
+</document>

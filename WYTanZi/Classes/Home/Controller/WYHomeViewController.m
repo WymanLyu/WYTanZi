@@ -14,6 +14,7 @@
 #import "WYBannerViewController.h"
 #import "WYMineViewController.h"
 #import "PingTransition.h"
+#import "WYDetailWebViewController.h"
 
 
 #define HomeUrl @"http://www.cdsb.mobi/cdsb/app/ios/pacong"
@@ -33,6 +34,8 @@
 /** 记录原来的nav代理 */
 @property (nonatomic, weak) id<UINavigationControllerDelegate> originDelegate;
 
+/** 详情界面控制器 */
+@property (nonatomic, strong) WYDetailWebViewController *webVc;
 
 
 @end
@@ -72,13 +75,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [WYTransionBar transitionBar].hidden = NO;
     self.originDelegate = self.navigationController.delegate;
     self.navigationController.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [WYTransionBar transitionBar].hidden = NO;
+    [self bigAnimateWithView:self.transitionBtn];
     self.tableView.backgroundColor = [UIColor whiteColor];
 }
 
@@ -98,6 +102,13 @@
     return _section;
 }
 
+- (WYDetailWebViewController *)webVc {
+    if (!_webVc) {
+        _webVc = [[WYDetailWebViewController alloc] init];
+    }
+    return _webVc;
+}
+
 #pragma mark - 设置轮播图
 - (void)setupAdView {
     UIView *view = [[UIView alloc] init];
@@ -112,55 +123,44 @@
     // 创建bar
     WYTransionBar *bar = [WYTransionBar transitionBarWithMineClick:^(UIButton *mineBtn) {
         // 我的按钮点击
-        [UIView animateKeyframesWithDuration:0.35f delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
-            // 缩放
-            mineBtn.transform = CGAffineTransformMakeScale(0.001, 0.001);
-            
-        } completion:^(BOOL finished) {
-            [UIView animateKeyframesWithDuration:0.35f delay:0 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
-                // 放大
-                mineBtn.transform = CGAffineTransformIdentity;
-            } completion:^(BOOL finished) {
-                WYLog(@"zhaunchang ///");
-                self.transitionBtn = mineBtn;
-                [WYTransionBar transitionBar].hidden = YES;
-                WYMineViewController *vc = [[WYMineViewController alloc] init];
-                [self.navigationController pushViewController:vc animated:YES];
-            }];
+        [self smallAnimateWithView:mineBtn finishBlock:^{
+            self.transitionBtn = mineBtn;
+            [WYTransionBar transitionBar].hidden = YES;
+            WYMineViewController *vc = [[WYMineViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
         }];
-        
         
     } moreClick:^(UIButton *moreBtn) {
         // 更多按钮点击
-        WYprintf(@"more ==");
-        moreBtn.layer.anchorPoint = CGPointMake(0.5, 0.5);
-        // 1.按钮缩放动画
-        [UIView animateKeyframesWithDuration:0.35f delay:0 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
-            // 缩放
-            moreBtn.transform = CGAffineTransformMakeScale(0.001, 0.001);
-            
-        } completion:^(BOOL finished) {
-            [UIView animateKeyframesWithDuration:0.35 delay:0 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
-                // 放大
-                moreBtn.transform = CGAffineTransformIdentity;
-            } completion:^(BOOL finished) {
-                WYLog(@"zhaunchang ///");
-                [WYTransionBar transitionBar].hidden = YES;
-                self.transitionBtn = moreBtn;
-                WYBannerViewController *vc = [[WYBannerViewController alloc] init];
-                [self.navigationController pushViewController:vc animated:YES];
-            }];
+        [self smallAnimateWithView:moreBtn finishBlock:^{
+            [WYTransionBar transitionBar].hidden = YES;
+            self.transitionBtn = moreBtn;
+            WYBannerViewController *vc = [[WYBannerViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
         }];
-        
-        
-       
-       
     }];
     
     // 设置尺寸
     self.transitionBar = bar;
-
 }
+
+- (void)smallAnimateWithView:(UIView *)view finishBlock:(void(^)())finishBlock {
+    [UIView animateWithDuration:0.25f animations:^{
+        // 缩放
+        view.transform = CGAffineTransformMakeScale(0.01, 0.01);
+    } completion:^(BOOL finished) {
+        finishBlock();
+    }];
+}
+
+- (void)bigAnimateWithView:(UIView *)view {
+    [UIView animateWithDuration:0.25f delay:0.0f usingSpringWithDamping:0.5 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        // 复位
+        view.transform = CGAffineTransformIdentity;
+    } completion:nil];
+    
+}
+
 
 #pragma mark - 设置刷新控件
 - (void)setupRefresh {
@@ -264,8 +264,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [self.transitionBar show];
+    self.transitionBar.hidden = YES;
+    self.navigationController.delegate = self.originDelegate;
+    WYNewModel *new = self.section[indexPath.section][indexPath.row];
+    WYDetailWebViewController *detailVc = [[WYDetailWebViewController alloc] init];
+    detailVc.model = new;
+    [self.navigationController pushViewController:detailVc animated:YES];
 }
+
 
 // 向上滚则消失
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WYMineViewController : UIViewController<UINavigationControllerDelegate>
-@property (weak, nonatomic) UIButton *button;
+
 
 @end

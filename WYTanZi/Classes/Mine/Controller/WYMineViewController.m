@@ -8,18 +8,25 @@
 
 #import "WYMineViewController.h"
 #import "PingInvertTransition.h"
-//#import "WYBannerViewController.h"
 #import "WYHomeViewController.h"
 
 @interface WYMineViewController ()<UINavigationControllerDelegate>
 /** 记录原来的nav代理 */
 @property (nonatomic, weak) id<UINavigationControllerDelegate> originDelegate;
+
+@property (weak, nonatomic) IBOutlet UIButton *button;
 @end
 
 @implementation WYMineViewController{
     
     UIPercentDrivenInteractiveTransition *percentTransition;
 }
+
+- (void)loadView {
+    self.view = [[NSBundle mainBundle] loadNibNamed:@"WYMineViewController" owner:self options:nil].lastObject;
+    self.view.frame = [UIScreen mainScreen].bounds;
+}
+
 -(void)viewWillAppear:(BOOL)animated{
     self.navigationController.delegate = self;
 }
@@ -31,13 +38,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton *button = [[UIButton alloc] init];
-    [button setTitle:@"dismiss" forState:UIControlStateNormal];
-    [button sizeToFit];
-    [self.view addSubview:button];
-    [button addTarget:self action:@selector(clickToPop:) forControlEvents:UIControlEventTouchUpInside];
-    self.button = button;
-    self.view.backgroundColor = [UIColor wy_randomColor];
     
     UIScreenEdgePanGestureRecognizer *edgeGes = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(edgePan:)];
     edgeGes.edges = UIRectEdgeRight;
@@ -56,13 +56,13 @@
     return percentTransition;
 }
 
-- (void)clickToPop:(id)sender {
+- (IBAction)popVc:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+
 -(void)edgePan:(UIPanGestureRecognizer *)recognizer{
     CGFloat per =  [recognizer translationInView:self.view].x / (self.view.bounds.size.width);
-    NSLog(@"right : %f", per);
     per = MIN(1.0,(MAX(0.0, -per)));
     
     if (recognizer.state == UIGestureRecognizerStateBegan) {
