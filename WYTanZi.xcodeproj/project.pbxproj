@@ -11,6 +11,7 @@
 		134E004F1CF1E2020065B041 /* WYTransionBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134E004E1CF1E2020065B041 /* WYTransionBar.xib */; };
 		138CB3D11CF53F7D006D5E0A /* WYWebBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138CB3D01CF53F7D006D5E0A /* WYWebBar.xib */; };
 		138CB3D41CF53F97006D5E0A /* WYWebBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 138CB3D31CF53F97006D5E0A /* WYWebBar.m */; };
+		138CB3D71CF55150006D5E0A /* WYAdPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 138CB3D61CF55150006D5E0A /* WYAdPageView.m */; };
 		13CDDE5E1CF0AB3D0077CF5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDE5D1CF0AB3D0077CF5F /* main.m */; };
 		13CDDE611CF0AB3D0077CF5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CDDE601CF0AB3D0077CF5F /* AppDelegate.m */; };
 		13CDDE691CF0AB3D0077CF5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CDDE681CF0AB3D0077CF5F /* Assets.xcassets */; };
@@ -70,6 +71,8 @@
 		138CB3D01CF53F7D006D5E0A /* WYWebBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYWebBar.xib; sourceTree = "<group>"; };
 		138CB3D21CF53F97006D5E0A /* WYWebBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWebBar.h; sourceTree = "<group>"; };
 		138CB3D31CF53F97006D5E0A /* WYWebBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWebBar.m; sourceTree = "<group>"; };
+		138CB3D51CF55150006D5E0A /* WYAdPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYAdPageView.h; sourceTree = "<group>"; };
+		138CB3D61CF55150006D5E0A /* WYAdPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYAdPageView.m; sourceTree = "<group>"; };
 		13CDDE591CF0AB3D0077CF5F /* WYTanZi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYTanZi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CDDE5D1CF0AB3D0077CF5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		13CDDE5F1CF0AB3D0077CF5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -320,6 +323,8 @@
 				138CB3D21CF53F97006D5E0A /* WYWebBar.h */,
 				138CB3D31CF53F97006D5E0A /* WYWebBar.m */,
 				138CB3D01CF53F7D006D5E0A /* WYWebBar.xib */,
+				138CB3D51CF55150006D5E0A /* WYAdPageView.h */,
+				138CB3D61CF55150006D5E0A /* WYAdPageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -650,6 +655,7 @@
 				13CDDEBB1CF0B99E0077CF5F /* NSArray+WY.m in Sources */,
 				13D1FBEE1CF3115700456FA0 /* WYMineViewController.m in Sources */,
 				13E427611CF1B3B900A3EBBF /* WYNewModel.m in Sources */,
+				138CB3D71CF55150006D5E0A /* WYAdPageView.m in Sources */,
 				13CDDEC31CF0B99E0077CF5F /* UITabBarItem+WY.m in Sources */,
 				13CDDEA01CF0B4A50077CF5F /* WYGuideViewController.m in Sources */,
 				13E427521CF152BD00A3EBBF /* WYNetTool.m in Sources */,

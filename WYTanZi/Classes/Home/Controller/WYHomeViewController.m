@@ -15,6 +15,7 @@
 #import "WYMineViewController.h"
 #import "PingTransition.h"
 #import "WYDetailWebViewController.h"
+#import "WYAdPageView.h"
 
 
 #define HomeUrl @"http://www.cdsb.mobi/cdsb/app/ios/pacong"
@@ -111,11 +112,21 @@
 
 #pragma mark - 设置轮播图
 - (void)setupAdView {
-    UIView *view = [[UIView alloc] init];
-    view.wy_height = 200;
-    view.backgroundColor = [UIColor orangeColor];
-    self.tableView.tableHeaderView = view;
-    self.view.backgroundColor = [UIColor blackColor];
+//    UIView *view = [[UIView alloc] init];
+//    view.wy_height = 200;
+//    view.backgroundColor = [UIColor orangeColor];
+//    self.tableView.tableHeaderView = view;
+//    self.view.backgroundColor = [UIColor blackColor];
+    WYAdPageView *adView = [[WYAdPageView alloc] init];
+    adView.wy_height = 200;
+    
+    NSMutableArray *mutableArr = [NSMutableArray array];
+    for (int i = 0; i < 3; i++) {
+        UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"ad%d", i + 1]];
+        [mutableArr addObject:img];
+    }
+    adView.imgArr = mutableArr;
+    self.tableView.tableHeaderView = adView;
 }
 
 #pragma mark - 设置转场按钮
