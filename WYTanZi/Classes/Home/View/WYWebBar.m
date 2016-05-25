@@ -116,7 +116,7 @@ static WYWebWindow *_window;
 // 拦截触摸事件
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     // 仅当事件在按钮上才处理
-    BOOL isHandle = CGRectContainsPoint(CGRectMake(15, 0, 50, 80), point) || CGRectContainsPoint(CGRectMake([UIScreen mainScreen].bounds.size.width - 80, 0, 50, 80), point);
+    BOOL isHandle = CGRectContainsPoint(CGRectMake(15, 0, 50, 80), point) || CGRectContainsPoint(CGRectMake([UIScreen mainScreen].bounds.size.width - 180, 0, 50, 80), point);
     if (!isHandle) return nil;
     
     return [super hitTest:point withEvent:event];

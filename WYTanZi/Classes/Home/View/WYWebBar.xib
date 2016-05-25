@@ -27,7 +27,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="favoriteClick:" destination="Ofk-Mv-vTE" eventType="touchUpInside" id="4zH-In-IAi"/>
-                        <action selector="mineClick:" destination="Ofk-Mv-vTE" eventType="touchUpInside" id="RFc-dL-a0u"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNB-4M-9eP">
@@ -62,7 +61,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="commitClick:" destination="Ofk-Mv-vTE" eventType="touchUpInside" id="G8c-sx-m9M"/>
-                        <action selector="mineClick:" destination="Ofk-Mv-vTE" eventType="touchUpInside" id="Hep-bt-rSt"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-wr-9wB">
