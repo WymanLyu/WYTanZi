@@ -28,10 +28,12 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    
     self.navigationController.delegate = self;
 }
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
     self.navigationController.delegate = self;
 }
 
@@ -43,6 +45,18 @@
     edgeGes.edges = UIRectEdgeRight;
     [self.view addGestureRecognizer:edgeGes];
    
+}
+
+// 设置
+- (IBAction)settingClick:(id)sender {
+    UIViewController *settingVc = [[UIViewController alloc] init];
+    settingVc.title= @"设置";
+    settingVc.view.backgroundColor = [UIColor wy_randomColor];
+//    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.delegate = nil;
+    self.navigationController.navigationBar.hidden = NO;
+    [self.navigationController pushViewController:settingVc animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

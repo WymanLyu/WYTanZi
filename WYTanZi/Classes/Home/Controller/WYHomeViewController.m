@@ -16,10 +16,12 @@
 #import "PingTransition.h"
 #import "WYDetailWebViewController.h"
 #import "WYAdPageView.h"
+#import "VideoPlayView.h"
 
 
 #define HomeUrl @"http://www.cdsb.mobi/cdsb/app/ios/pacong"
 #define MoreUrl @"http://www.cdsb.mobi/cdsb/app/ios/pacong/pcgd/"
+#define VideoUrl @"http://120.25.226.186:32812/resources/videos/minion_01.mp4"
 
 @interface WYHomeViewController ()<UINavigationControllerDelegate>
 
@@ -37,7 +39,6 @@
 
 /** 详情界面控制器 */
 @property (nonatomic, strong) WYDetailWebViewController *webVc;
-
 
 @end
 
@@ -281,6 +282,21 @@
     WYDetailWebViewController *detailVc = [[WYDetailWebViewController alloc] init];
     detailVc.model = new;
     [self.navigationController pushViewController:detailVc animated:YES];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    if (section != 0) return nil;
+    VideoPlayView *playerView = [VideoPlayView videoPlayView];
+    playerView.urlString = VideoUrl;
+    playerView.contrainerViewController = self;
+//    UIView *playerView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 350)];
+//    playerView.backgroundColor = [UIColor redColor];
+    return playerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    if (section != 0) return 0;
+    return 180;
 }
 
 

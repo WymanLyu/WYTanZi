@@ -33,6 +33,9 @@
 		13D1FBF41CF3118600456FA0 /* PingInvertTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D1FBF11CF3118600456FA0 /* PingInvertTransition.m */; };
 		13D1FBF51CF3118600456FA0 /* PingTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D1FBF31CF3118600456FA0 /* PingTransition.m */; };
 		13D1FC3F1CF32AC000456FA0 /* WYBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D1FC3E1CF32AC000456FA0 /* WYBannerViewController.m */; };
+		13E1EF0A1CF5EC7400FEF3D4 /* VideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E1EF081CF5EC7400FEF3D4 /* VideoPlayView.m */; };
+		13E1EF0E1CF5ED2D00FEF3D4 /* FullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E1EF0D1CF5ED2D00FEF3D4 /* FullViewController.m */; };
+		13E1EF101CF5F76B00FEF3D4 /* VideoPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E1EF0F1CF5F76B00FEF3D4 /* VideoPlayView.xib */; };
 		13E427521CF152BD00A3EBBF /* WYNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427511CF152BD00A3EBBF /* WYNetTool.m */; };
 		13E427551CF152D900A3EBBF /* WYConstValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427541CF152D900A3EBBF /* WYConstValue.m */; };
 		13E427581CF15C8000A3EBBF /* NSDictionary+WY.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E427571CF15C8000A3EBBF /* NSDictionary+WY.m */; };
@@ -119,6 +122,11 @@
 		13D1FBF31CF3118600456FA0 /* PingTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingTransition.m; sourceTree = "<group>"; };
 		13D1FC3D1CF32AC000456FA0 /* WYBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYBannerViewController.h; sourceTree = "<group>"; };
 		13D1FC3E1CF32AC000456FA0 /* WYBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYBannerViewController.m; sourceTree = "<group>"; };
+		13E1EF071CF5EC7400FEF3D4 /* VideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayView.h; sourceTree = "<group>"; };
+		13E1EF081CF5EC7400FEF3D4 /* VideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayView.m; sourceTree = "<group>"; };
+		13E1EF0C1CF5ED2D00FEF3D4 /* FullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullViewController.h; sourceTree = "<group>"; };
+		13E1EF0D1CF5ED2D00FEF3D4 /* FullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullViewController.m; sourceTree = "<group>"; };
+		13E1EF0F1CF5F76B00FEF3D4 /* VideoPlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoPlayView.xib; sourceTree = "<group>"; };
 		13E427501CF152BD00A3EBBF /* WYNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetTool.h; sourceTree = "<group>"; };
 		13E427511CF152BD00A3EBBF /* WYNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetTool.m; sourceTree = "<group>"; };
 		13E427531CF152D900A3EBBF /* WYConstValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYConstValue.h; sourceTree = "<group>"; };
@@ -281,6 +289,7 @@
 		13CDDE941CF0B0770077CF5F /* Home[主页] */ = {
 			isa = PBXGroup;
 			children = (
+				13E1EF061CF5EC6400FEF3D4 /* Player */,
 				13D1FBEF1CF3117100456FA0 /* Animator */,
 				13CDDE951CF0B0770077CF5F /* Controller */,
 				13CDDE961CF0B0770077CF5F /* Model */,
@@ -425,6 +434,18 @@
 			name = Animator;
 			sourceTree = "<group>";
 		};
+		13E1EF061CF5EC6400FEF3D4 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				13E1EF0C1CF5ED2D00FEF3D4 /* FullViewController.h */,
+				13E1EF0D1CF5ED2D00FEF3D4 /* FullViewController.m */,
+				13E1EF071CF5EC7400FEF3D4 /* VideoPlayView.h */,
+				13E1EF081CF5EC7400FEF3D4 /* VideoPlayView.m */,
+				13E1EF0F1CF5F76B00FEF3D4 /* VideoPlayView.xib */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
 		13E4274F1CF1527E00A3EBBF /* Global[全局] */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +585,7 @@
 			files = (
 				13E427661CF1C8F700A3EBBF /* WYNewCell.xib in Resources */,
 				13E682491CF41EF8008F37DB /* WYMineViewController.xib in Resources */,
+				13E1EF101CF5F76B00FEF3D4 /* VideoPlayView.xib in Resources */,
 				134E004F1CF1E2020065B041 /* WYTransionBar.xib in Resources */,
 				138CB3D11CF53F7D006D5E0A /* WYWebBar.xib in Resources */,
 				13CDDE691CF0AB3D0077CF5F /* Assets.xcassets in Resources */,
@@ -642,6 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13D1FC3F1CF32AC000456FA0 /* WYBannerViewController.m in Sources */,
+				13E1EF0A1CF5EC7400FEF3D4 /* VideoPlayView.m in Sources */,
 				13CDDEC11CF0B99E0077CF5F /* UIImage+WY.m in Sources */,
 				13D1FBF41CF3118600456FA0 /* PingInvertTransition.m in Sources */,
 				13CDDEBD1CF0B99E0077CF5F /* NSFileManager+WY.m in Sources */,
@@ -659,6 +682,7 @@
 				13CDDEC31CF0B99E0077CF5F /* UITabBarItem+WY.m in Sources */,
 				13CDDEA01CF0B4A50077CF5F /* WYGuideViewController.m in Sources */,
 				13E427521CF152BD00A3EBBF /* WYNetTool.m in Sources */,
+				13E1EF0E1CF5ED2D00FEF3D4 /* FullViewController.m in Sources */,
 				13E427581CF15C8000A3EBBF /* NSDictionary+WY.m in Sources */,
 				13CDDEBE1CF0B99E0077CF5F /* NSString+WY.m in Sources */,
 				13CDDEBF1CF0B99E0077CF5F /* UIBarButtonItem+WY.m in Sources */,

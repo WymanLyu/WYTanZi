@@ -42,6 +42,7 @@
         make.leading.equalTo(self);
         make.trailing.equalTo(self);
     }];
+    
     // 布局adView的内容
     self.adView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width * 3, 0);
     self.adView.pagingEnabled = YES;
@@ -58,6 +59,7 @@
         make.bottom.equalTo(self);
         make.height.equalTo(@64);
     }];
+    
     // 设置
     lbl.numberOfLines = 0;
     lbl.font = [UIFont systemFontOfSize:17.0];
