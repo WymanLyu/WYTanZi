@@ -102,7 +102,8 @@ static int page = 0;
         [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self); // 此处不能以父控件为标准?
             make.top.equalTo(self);
-            make.leftMargin.equalTo(@(i*[UIScreen mainScreen].bounds.size.width));
+            make.left.equalTo(self.adView.mas_left).offset(i*[UIScreen mainScreen].bounds.size.width);
+//            make.leftMargin.equalTo(@(i*[UIScreen mainScreen].bounds.size.width));
             make.width.equalTo(@([UIScreen mainScreen].bounds.size.width));
         }];
         

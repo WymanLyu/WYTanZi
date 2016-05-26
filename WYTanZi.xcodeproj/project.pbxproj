@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1301F61D1CF68D4A009ED06A /* WYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1301F61C1CF68D4A009ED06A /* WYSettingViewController.m */; };
 		134E004D1CF1E1E90065B041 /* WYTransionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 134E004C1CF1E1E90065B041 /* WYTransionBar.m */; };
 		134E004F1CF1E2020065B041 /* WYTransionBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134E004E1CF1E2020065B041 /* WYTransionBar.xib */; };
 		138CB3D11CF53F7D006D5E0A /* WYWebBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138CB3D01CF53F7D006D5E0A /* WYWebBar.xib */; };
@@ -68,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1301F61B1CF68D4A009ED06A /* WYSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYSettingViewController.h; sourceTree = "<group>"; };
+		1301F61C1CF68D4A009ED06A /* WYSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYSettingViewController.m; sourceTree = "<group>"; };
 		134E004B1CF1E1E90065B041 /* WYTransionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTransionBar.h; sourceTree = "<group>"; };
 		134E004C1CF1E1E90065B041 /* WYTransionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTransionBar.m; sourceTree = "<group>"; };
 		134E004E1CF1E2020065B041 /* WYTransionBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYTransionBar.xib; sourceTree = "<group>"; };
@@ -363,6 +366,8 @@
 				13D1FBEC1CF3115700456FA0 /* WYMineViewController.h */,
 				13D1FBED1CF3115700456FA0 /* WYMineViewController.m */,
 				13E682481CF41EF8008F37DB /* WYMineViewController.xib */,
+				1301F61B1CF68D4A009ED06A /* WYSettingViewController.h */,
+				1301F61C1CF68D4A009ED06A /* WYSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -691,6 +696,7 @@
 				13CDDEA31CF0B5030077CF5F /* WYBaseNavigationViewController.m in Sources */,
 				13E427551CF152D900A3EBBF /* WYConstValue.m in Sources */,
 				13E4275B1CF1A8E600A3EBBF /* WYHomeViewController.m in Sources */,
+				1301F61D1CF68D4A009ED06A /* WYSettingViewController.m in Sources */,
 				13CDDEBC1CF0B99E0077CF5F /* NSDate+WY.m in Sources */,
 				13CDDE5E1CF0AB3D0077CF5F /* main.m in Sources */,
 			);

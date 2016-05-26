@@ -9,6 +9,7 @@
 #import "WYMineViewController.h"
 #import "PingInvertTransition.h"
 #import "WYHomeViewController.h"
+#import "WYSettingViewController.h"
 
 @interface WYMineViewController ()<UINavigationControllerDelegate>
 /** 记录原来的nav代理 */
@@ -28,12 +29,12 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    
-    self.navigationController.delegate = self;
+    self.navigationController.navigationBar.hidden = YES;
+//    self.navigationController.delegate = self;
 }
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    self.navigationController.navigationBar.hidden = YES;
+//    self.navigationController.navigationBar.hidden = YES;
     self.navigationController.delegate = self;
 }
 
@@ -49,7 +50,7 @@
 
 // 设置
 - (IBAction)settingClick:(id)sender {
-    UIViewController *settingVc = [[UIViewController alloc] init];
+    WYSettingViewController *settingVc = [[WYSettingViewController alloc] init];
     settingVc.title= @"设置";
     settingVc.view.backgroundColor = [UIColor wy_randomColor];
 //    self.navigationController.navigationBarHidden = NO;
